@@ -1,0 +1,120 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  /* ESTILOS GENERALES */
+body {
+    font-family: 'Arial' sans-serif;
+    background-color: #111 !important; 
+    color: #eee !important;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid crimson;
+}
+
+header h1 {
+    color: rgb(255, 0, 51);
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #000;
+}
+
+  /* NAVEGACIÓN */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f00;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+main {
+    padding: 20px;
+    border: 1px solid #333;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: rgba(26, 26, 26, 0.9);
+    border-radius: 8px;
+}
+
+
+footer {
+    background-color: #222;
+    padding: 15px;
+    text-align: center;
+    color: #ccc;
+    border-top: 2px solid crimson;
+}
+
+  /* IMÁGENES */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #f00;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+  /* IMÁGENES MÁSCARAS Y GALERÍA CON ALTERNANCIA */
+.img-alternada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.img-alternada img {
+    width: 45%;
+}
+
+.img-alternada:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+  /* GRID PARA GALERÍA  */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+  /* MEDIA QUERY RESPONSIVE */
+@media (max-width: 768px) {
+    nav ul {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .img-alternada {
+    flex-direction: column !important;
+    }
+
+    .img-alternada img {
+    width: 100%;
+    }
+
+    main {
+    margin: 10px;
+    padding: 15px;
+    }
+}
